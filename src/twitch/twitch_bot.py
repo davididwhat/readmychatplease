@@ -3,15 +3,15 @@ import asyncio
 from twitchAPI.chat import Chat, ChatMessage, EventData
 from twitchAPI.oauth import UserAuthenticator
 from twitchAPI.twitch import Twitch
-from twitchAPI.type import AuthScope, ChatEvent
+from twitchAPI.type import ChatEvent
 
 
 class TwitchBot:
-    def __init__(self, app_id: str, app_secret: str, target_channel: str):
+    def __init__(self, app_id: str, app_secret: str, target_channel: str, user_scope: list):
         self.app_id = app_id
         self.app_secret = app_secret
         self.target_channel = target_channel
-        self.user_scope = [AuthScope.CHAT_READ, AuthScope.CHAT_EDIT, AuthScope.CHANNEL_MANAGE_BROADCAST]
+        self.user_scope = user_scope
         self.twitch = None
         self.chat = None
         self.cogs = {}
