@@ -13,7 +13,7 @@ from datetime import datetime
 
 from twitchAPI.type import AuthScope
 
-from twitch import AuthFetch, ReaderCog, TwitchBot, TwitchCog, load_cogs
+from twitch import AuthFetch, TwitchBot, load_cogs
 
 
 async def construct_bot() -> TwitchBot:
