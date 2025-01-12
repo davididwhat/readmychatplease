@@ -1,8 +1,6 @@
 import os
 import socket
 
-HOST=...
-PORT=...
 
 class Server:
     def __init__(self, host: str, port: int | str, *args):
@@ -21,6 +19,9 @@ class Server:
                 if not data:
                     break
                 print(f"{data.decode()}")
+
+HOST=...
+PORT=...
 
 if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')
