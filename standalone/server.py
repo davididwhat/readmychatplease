@@ -20,10 +20,10 @@ class Server:
                     break
                 print(f"{data.decode()}")
 
-HOST=...
-PORT=...
-
 if __name__ == "__main__":
+    HOST=...
+    PORT=...
+
     os.system('cls' if os.name == 'nt' else 'clear')
     server = Server(HOST, PORT, socket.AF_INET, socket.SOCK_STREAM)
     server.start()
