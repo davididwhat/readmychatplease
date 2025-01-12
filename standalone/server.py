@@ -21,8 +21,16 @@ class Server:
                 print(f"{data.decode()}")
 
 if __name__ == "__main__":
-    HOST=...
-    PORT=...
+    '''
+    Change these to what you please
+
+    If you don't know what to do, you can do this:
+    
+    HOST ="0.0.0.0"
+    PORT = 5000
+    '''
+    HOST: str       =...
+    PORT: int | str =...
 
     os.system('cls' if os.name == 'nt' else 'clear')
     server = Server(HOST, PORT, socket.AF_INET, socket.SOCK_STREAM)
