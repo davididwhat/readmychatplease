@@ -32,7 +32,6 @@ def watch_file(filename: str, client: ServerClient) -> None:
             time.sleep(0.1)
             new_line = event_handler.get_new_line()
             if new_line:
-                print(f"Detected new line: {new_line}")
                 client.send(new_line)
                 event_handler._new_line = None
     except KeyboardInterrupt:

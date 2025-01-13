@@ -19,13 +19,13 @@ class ReaderCog(TwitchCog):
     async def on_ready(self, ready_event: EventData) -> None:
         [await ready_event.chat.join_room(self.bot.target_channel)]
 
-        open(self.temp_file, 'w').close()
-
         try:
             files = os.listdir("./logs")
         except FileNotFoundError:
             os.mkdir("./logs")
             files = os.listdir("./logs")
+
+        open(self.temp_file, 'w').close()
 
         today_date = datetime.now().strftime("%d_%m_%Y")
         today_filename = f"{today_date}.txt"
