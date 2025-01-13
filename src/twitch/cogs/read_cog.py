@@ -4,6 +4,7 @@ from datetime import datetime
 from twitchAPI.chat import ChatMessage, EventData
 
 from twitch.twitch_cog import TwitchCog
+from utils import VarFetch
 
 
 class ReaderCog(TwitchCog):
@@ -11,8 +12,14 @@ class ReaderCog(TwitchCog):
         super().__init__(bot)
         self.logs_file: str 
 
+        cfg = VarFetch()
+        cfg.load_config(keys=['TEMP_FILE'])
+        self.temp_file = cfg.config()['TEMP_FILE']
+
     async def on_ready(self, ready_event: EventData) -> None:
         [await ready_event.chat.join_room(self.bot.target_channel)]
+
+        open(self.temp_file, 'w').close()
 
         try:
             files = os.listdir("./logs")
@@ -40,4 +47,5 @@ class ReaderCog(TwitchCog):
         with open(self.logs_file, 'a', encoding='utf-8') as logs:
             print(f"{timestamp} | {msg.user.name}: {msg.text}", file=logs)
 
-        print(f"{timestamp} | {msg.user.name}: {msg.text}")
+        with open(self.temp_file, 'a', encoding='utf-8') as temp:
+            print(f"{timestamp} | {msg.user.name}: {msg.text}", file=temp)
