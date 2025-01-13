@@ -13,7 +13,8 @@ class Server:
         with self.s as s:
             s.listen()
             print(f"Server listening on {self.host}:{self.port}")
-            conn, self.addr = s.accept()
+            conn, addr = s.accept()
+            print(f"Connected by: {addr}")
             while True:
                 data = conn.recv(1024)
                 if not data:
@@ -26,11 +27,11 @@ if __name__ == "__main__":
 
     If you don't know what to do, you can do this:
     
-    HOST ="0.0.0.0"
+    HOST = "0.0.0.0"
     PORT = 5000
     '''
-    HOST: str       =...
-    PORT: int | str =...
+    HOST: str       = "0.0.0.0"
+    PORT: int | str = 5000
 
     os.system('cls' if os.name == 'nt' else 'clear')
     server = Server(HOST, PORT, socket.AF_INET, socket.SOCK_STREAM)
