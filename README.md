@@ -17,6 +17,8 @@ It was originally built for personal use, but I liked the idea so I made it more
 
 ## Requirements:
 
+**`Python 3.8+`**
+
 You can install these dependencies manually, but ReadMyChat please will do it for you automatically upon running `main.py` (provided you have Python installed)
 
 **TwitchAPI**:
@@ -42,16 +44,14 @@ git clone https://github.com/davididwhat/readmychatplease.git
 
 - Navigate to the `./readmychatplease/` directory and open **`.env`** in an editor of your choice
 
-| Variables  | Values |
-| ------------- |:-------------:|
-| CLIENT_ID      | Twitch application ID     |
-| APP_SECRET      | Twitch application secret    |
-| CHANNEL_NAME      | Twitch channel username|
-|-------------------|---------------------------|
-|ADDRESS|Socket server host IP|
-|PORT|Socket server running port|
-|-------------------|---------------------------|
-|TEMP_FILE|temp.txt, don't change|
+| Variable       | Value                   |
+|----------------|-------------------------|
+| CLIENT_ID      | Twitch application ID   |
+| APP_SECRET     | Twitch application secret |
+| CHANNEL_NAME   | Twitch channel username |
+| ADDRESS        | Socket server host IP   |
+| PORT           | Socket server port      |
+| TEMP_FILE      | temp.txt (don't change) |
 
 *Get your ID and Secret at [Twitch Developer Console](https://dev.twitch.tv/console/)*
 
