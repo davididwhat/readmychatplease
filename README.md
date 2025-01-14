@@ -6,14 +6,14 @@ A solo-developed Twitch chat message-forwarding program, made for self-use, but 
 
 This project combines a TwitchAPI bot with a client-side socket server to forward Twitch chat messages to a designated socket server. It operates as follows:
 
-1. **TwitchAPI Bot**: The bot connects to a Twitch channel and listens for incoming messages in real-time.
+1. **TwitchAPI Bot**: The bot connects to a Twitch channel and listens for incoming messages in real time.
 
 2. **Client-Side Socket Server**: The client-side socket server establishes a persistent connection to a pre-configured external socket server.
 
 3. **Message Forwarding**: The bot captures Twitch chat messages and logs them into a temporary .txt file. A watchdog module monitors this file, captures new messages, then forwards them to the socket server that the client is connected to.
 
 
-It was built originally for personal use, but I liked the idea so I made it more maintanable and improved it. 
+It was built originally for personal use, but I liked the idea so I made it more maintainable and improved it. 
 
 ## Requirements:
 
