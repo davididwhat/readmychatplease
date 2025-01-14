@@ -13,7 +13,7 @@ This project combines a TwitchAPI bot with a client-side socket server to forwar
 3. **Message Forwarding**: The bot captures Twitch chat messages and logs them into a temporary .txt file. A watchdog module monitors this file, captures new messages, then forwards them to the socket server that the client is connected to.
 
 
-It was built originally for personal use, but I liked the idea so I made it more maintainable and improved it. 
+It was originally built for personal use, but I liked the idea so I made it more maintainable and improved it. 
 
 ## Requirements:
 
