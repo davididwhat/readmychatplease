@@ -1,10 +1,12 @@
 import os
 import subprocess
 import sys
-import time
 
 
 def main():
+    if os.name == 'nt':
+        os.system("title ReadMyChatPlease")
+        
     python_executable = sys.executable
 
     subprocess.Popen(
