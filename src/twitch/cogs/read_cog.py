@@ -32,7 +32,7 @@ class ReaderCog(TwitchCog):
 
         if today_filename in files:
             with open(f"./logs/{today_filename}", 'a') as logs:
-                print(f"\n\nNew Session @ {datetime.now().strftime('%H%M%S')}\n\n", file=logs)
+                print(f"\n\nNew Session @ {datetime.now().strftime('%H:%M:%S')}\n\n", file=logs)
         else:
             with open(f"./logs/{today_filename}", 'a') as logs:
                 print(f"Logs @ {today_date}\n\n", file=logs)
