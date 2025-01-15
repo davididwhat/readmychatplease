@@ -19,8 +19,6 @@ It was originally built for personal use, but I liked the idea so I made it more
 
 **`Python 3.8+`**
 
-You can install these dependencies manually, but ReadMyChat please will do it for you automatically upon running `main.py` (provided you have Python installed)
-
 **TwitchAPI**:
 ```
 python -m pip install twitchapi
@@ -33,6 +31,8 @@ python -m pip install python-dotenv
 ```
 python -m pip install watchdog
 ```
+
+You can install these dependencies manually, but ReadMyChat please will do it for you automatically upon running `main.py` (provided you have Python installed)
 
 # How to use:
 
