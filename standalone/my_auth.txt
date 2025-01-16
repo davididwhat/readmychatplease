@@ -1,0 +1,3 @@
+client_id=
+app_secret=
+channel_name=
