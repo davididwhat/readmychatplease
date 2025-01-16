@@ -56,7 +56,7 @@ git clone https://github.com/davididwhat/readmychatplease.git
 *Get your ID and Secret at [Twitch Developer Console](https://dev.twitch.tv/console/)*
 
 - in `./readmychatplease/standalone/` you will find **`server.py`** , you may use your own but I will continue writing this part assuming you are using the socket server provided as an example in this project.
-- Transfer **`server.py`** onto a device you plan to use as your reading screen (Make sure the device uses the same LAN as your main device, otherwise you will have to port-forward), and change the variables `HOST` and `PORT` at the bottom according to the comment.
+- Transfer **`server.py`** onto a device you plan to use as your reading screen (Make sure the device uses the same LAN as your main device, otherwise you will have to port-forward).
 
 - Run the server (assuming from within its directory)::
 ```
